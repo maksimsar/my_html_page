@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первый семестр - ЭФБО-02-23</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="/Users/macbook/HTML CSS JS/2ffe306301f8dd8be428b29f338f9322.jpg" alt="Логотип"></div>
+        <div class="title">
+            <h1>Группа ЭФБО-02-23</h1>
+            <p>Саранцев Максим Вячеславович</p>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="1st.html">Главная</a></li>
+            <li><a href="3rd.html">Первый семестр</a></li>
+            <li><a href="4.html">Второй семестр</a></li>
+            <li><a href="2nd.html">Услуги</a></li>
+            <li><a href="#">Авторизация</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <h3>Навигация по странице</h3>
+            <ul>
+                <li><a></a><button onclick="scrollToSection('lectures')">Лекции</button></a></li>
+                <li><a></a><button onclick="scrollToSection('practical')">Практики</button></a></li>
+                <li><a></a><button onclick="scrollToSection('pdf')">PDF</button></a></li>
+                <li><a></a><button onclick="scrollToSection('map')">Яндекс-карта</button></a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2 id="lectures">План лекций</h2>
+            <table id="lectures-table">
+                <tr>
+                    <th>№</th>
+                    <th>Тема</th>
+                    <th>Отметка о посещении</th>
+                    <th>Изменить отметку</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Основы языка HTML</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Углубленное изучение HTML</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Основы работы с CSS</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Адаптивная верстка. Flexbox и Grid Layout</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bootstrap - работа с фреймворком</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Основы языка JavaScript</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Работа с DOM и событиями в JavaScript</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Введение в GitHub и GitHub Pages</td>
+                    <td class="attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changeAttendance(this, '+')">+</button>
+                        <button onclick="changeAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 id="practical">План практических занятий</h2>
+            <table id="practical-table">
+                <tr>
+                    <th>№</th>
+                    <th>Тема</th>
+                    <th>Отметка о посещении</th>
+                    <th>Отметка о выполнении</th>
+                    <th>Изменить отметку</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>OCHOBbI языка HTML</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td> 
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Формы и кнопки в HTML</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Таблицы и интерактивные элементы HTML</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Основы работы с CSS</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td> 
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Работа с классами в CSS</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Работа с сетками и разметкой в HTML</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Адаптивная вёрстка</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Bootstrap</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Основы языка JavaScript</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Базовые задачи на JS</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>DOM-структура приложений и работа с объектами в языке JS</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Встраивание скриптов</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Отладка сценариев</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Анимации и работа с ними</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Github</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Защита проектов</td>
+                    <td class="attendance">+</td>
+                    <td class="practical-attendance">+</td>
+                    <td class="change-attendance">
+                        <button onclick="changePracticalAttendance(this, '+')">+</button>
+                        <button onclick="changePracticalAttendance(this, '-')">-</button>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 id="pdf">PDF документ</h2>
+            <object data="/Users/macbook/3 семестр/Фронтенд и бэкенд разработка/Screenshot 2024-09-09 at 13.53.03.pdf" type="application/pdf">
+                <p>Ваш браузер не поддерживает PDF. <a href="/Users/macbook/3 семестр/Фронтенд и бэкенд разработка/Screenshot 2024-09-09 at 13.53.03.pdf">Скачать PDF</a>.</p>
+            </object>
+
+            <h2 id="map">Яндекс карта</h2>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae6b494cdd82c29649874490a956af97580bb1424c5bc957dca423b576e7f70e2&amp;source=constructor" width=100% height=100% frameborder="0"></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>© Саранцев Максим Вячеславович 2024</p>
+        <!-- Иконка телеграмма с ссылкой на пользователя -->
+        <div class="telegram-icon">
+            <a href="https://t.me/maksar0" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+            </a>
+        </div>
+    </footer>
+    <script>
+        function changeAttendance(button, status) {
+            let attendanceCell = button.closest('tr').querySelector('.attendance');
+            attendanceCell.textContent = status;
+        }
+
+        function changePracticalAttendance(button, status) {
+            let practicalAttendanceCell = button.closest('tr').querySelector('.practical-attendance');
+            practicalAttendanceCell.textContent = status;
+        }
+    </script>
+    <script>
+        // Функция для плавного перехода к разделам
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html> 

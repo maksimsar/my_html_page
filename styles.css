@@ -1,0 +1,424 @@
+/* Общие стили для всех элементов */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стили для заголовков */
+h1, h2, h3 {
+  color: #00698f;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ccc;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.title h1 {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.title p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Навигация */
+nav {
+  background-color: #343a40;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center; /* Центровка элементов */
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a:active {
+  color: #999;
+}
+
+/* Основной блок */
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  flex: 1;
+}
+
+aside {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+
+aside button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+aside button:hover {
+  background-color: #343a40;
+}
+
+section {
+  flex-grow: 1;
+}
+
+/* Таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Кнопки */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Формы */
+form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Изображения */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+/* Футер */
+footer {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  border-top: 2px solid #ccc;
+  margin-top: auto;
+  color: white;
+}
+
+.telegram-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.telegram-icon img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px;
+  }
+  .right-image {
+    max-width: 150px; /* Уменьшаем ширину для планшетов */
+    margin: 5px;      /* Снижаем отступы */
+  }
+  
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 10px 5px;
+    min-width: 100%;
+  }
+
+  .title h1 {
+    font-size: 18px;
+  }
+
+  .title p {
+    font-size: 10px;
+  }
+
+  nav ul {
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    margin: 5px;
+  }
+
+  .telegram-icon {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .right-image {
+    max-width: 100px; /* Еще меньшее изображение для мобильных */
+    float: none;      /* Отменяем обтекание для удобства чтения */
+    display: block;   /* Отображаем как блочный элемент */
+    margin: 0 auto 10px auto; /* Центрируем изображение с отступом снизу */
+  }
+}
+.right-image {
+  max-width: 200px; /* Максимальная ширина изображения */
+  width: 100%;      /* Адаптивная ширина */
+  height: auto;     /* Автоматическая высота для сохранения пропорций */
+  float: right;     /* Позиционирование справа */
+  margin: 10px;     /* Отступ вокруг изображения */
+  border-radius: 10px; /* Закругленные углы */
+}
+/* Основной стиль для таблиц */
+table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Контейнер для горизонтальной прокрутки */
+table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Стиль для ячеек заголовка таблицы */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Стиль для ячеек таблицы */
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Стиль для строки при наведении */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Кнопки для изменения отметки */
+button {
+  padding: 5px 10px;
+  margin: 2px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Стили для кнопок + и - */
+button[onclick*="changeAttendance"],
+button[onclick*="changePracticalAttendance"] {
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+}
+
+button[onclick*="changeAttendance"]:hover,
+button[onclick*="changePracticalAttendance"]:hover {
+  background-color: #0056b3;
+}
+
+/* Основной стиль страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Контейнер для формы */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Обработка ошибок */
+input:invalid, textarea:invalid {
+  border-color: red;
+}
+
+input:valid, textarea:valid {
+  border-color: green;
+}
